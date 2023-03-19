@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33402.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Data.UnitTests", "Jem.TextProcessing.Data.UnitTests\Jem.TextProcessing.Data.UnitTests.csproj", "{D03D7760-CF62-492B-8777-3973C5350B44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Data", "Jem.TextProcessing.Data\Jem.TextProcessing.Data.csproj", "{532993FE-63D5-44AF-995F-FCD8FDC676D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Analyzers", "Jem.TextProcessing.Analyzers\Jem.TextProcessing.Analyzers.csproj", "{2F0EA828-113C-4356-8EEA-A226AC517D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Samples", "Jem.TextProcessing.Samples\Jem.TextProcessing.Samples.csproj", "{965B53C9-A40F-4056-B12A-B627257FE8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Samples.UnitTests", "Jem.TextProcessing.Samples.UnitTests\Jem.TextProcessing.Samples.UnitTests.csproj", "{B924F4D8-342A-40A0-BB62-B42C302A98CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D03D7760-CF62-492B-8777-3973C5350B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03D7760-CF62-492B-8777-3973C5350B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03D7760-CF62-492B-8777-3973C5350B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03D7760-CF62-492B-8777-3973C5350B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532993FE-63D5-44AF-995F-FCD8FDC676D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532993FE-63D5-44AF-995F-FCD8FDC676D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532993FE-63D5-44AF-995F-FCD8FDC676D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532993FE-63D5-44AF-995F-FCD8FDC676D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0EA828-113C-4356-8EEA-A226AC517D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0EA828-113C-4356-8EEA-A226AC517D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0EA828-113C-4356-8EEA-A226AC517D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0EA828-113C-4356-8EEA-A226AC517D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965B53C9-A40F-4056-B12A-B627257FE8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965B53C9-A40F-4056-B12A-B627257FE8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965B53C9-A40F-4056-B12A-B627257FE8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965B53C9-A40F-4056-B12A-B627257FE8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0253F92B-0E13-4018-9E50-A6D654BF8E7B}
+	EndGlobalSection
+EndGlobal
