@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Jem.TextProcessing.Data\Jem.TextProcessing.Data.csproj" />
+  </ItemGroup>
+
 </Project>
