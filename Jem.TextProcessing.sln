@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33402.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Data.UnitTests", "Jem.TextProcessing.Data.UnitTests\Jem.TextProcessing.Data.UnitTests.csproj", "{D03D7760-CF62-492B-8777-3973C5350B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jem.TextProcessing.Data.UnitTests", "Jem.TextProcessing.Data.UnitTests\Jem.TextProcessing.Data.UnitTests.csproj", "{D03D7760-CF62-492B-8777-3973C5350B44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Data", "Jem.TextProcessing.Data\Jem.TextProcessing.Data.csproj", "{532993FE-63D5-44AF-995F-FCD8FDC676D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jem.TextProcessing.Data", "Jem.TextProcessing.Data\Jem.TextProcessing.Data.csproj", "{532993FE-63D5-44AF-995F-FCD8FDC676D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Analyzers", "Jem.TextProcessing.Analyzers\Jem.TextProcessing.Analyzers.csproj", "{2F0EA828-113C-4356-8EEA-A226AC517D1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jem.TextProcessing.Analyzers", "Jem.TextProcessing.Analyzers\Jem.TextProcessing.Analyzers.csproj", "{2F0EA828-113C-4356-8EEA-A226AC517D1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Samples", "Jem.TextProcessing.Samples\Jem.TextProcessing.Samples.csproj", "{965B53C9-A40F-4056-B12A-B627257FE8AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jem.TextProcessing.Samples", "Jem.TextProcessing.Samples\Jem.TextProcessing.Samples.csproj", "{965B53C9-A40F-4056-B12A-B627257FE8AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProcessing.Samples.UnitTests", "Jem.TextProcessing.Samples.UnitTests\Jem.TextProcessing.Samples.UnitTests.csproj", "{B924F4D8-342A-40A0-BB62-B42C302A98CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jem.TextProcessing.Samples.UnitTests", "Jem.TextProcessing.Samples.UnitTests\Jem.TextProcessing.Samples.UnitTests.csproj", "{B924F4D8-342A-40A0-BB62-B42C302A98CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jem.TextProfiling.Data", "Jem.TextProfiling.Data\Jem.TextProfiling.Data.csproj", "{4408CEBF-FAD7-4745-A7F0-EEEA934935BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B924F4D8-342A-40A0-BB62-B42C302A98CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4408CEBF-FAD7-4745-A7F0-EEEA934935BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4408CEBF-FAD7-4745-A7F0-EEEA934935BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4408CEBF-FAD7-4745-A7F0-EEEA934935BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4408CEBF-FAD7-4745-A7F0-EEEA934935BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

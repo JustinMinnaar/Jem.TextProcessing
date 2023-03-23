@@ -2,93 +2,36 @@
 
 namespace Jem.TextProcessing.Samples;
 
-public class TextGenerator
+public class SampleTextPageGenerator
 {
-    public static TextBlock AddBlock(TextPage page, TextFont font, double left, double top, List<string> lines, double lineHeight)
+    public TextPage GenerateInvoicePage(SampleInvoice invoice, TextFont font, double leftMargin, double topMargin)
     {
-        var block = new TextBlock
+        var page = new TextPage();
+
+        // Generate header block
+        var headerBlock = page.AddBlock
+            (font, leftMargin, topMargin, new List<string>(), 1.5);
+        headerBlock.AddLine(font, "INVOICE", 2);
+        headerBlock.AddLine(font, $"Number: {invoice.Number}", 1.2);
+        headerBlock.AddLine(font, $"Date: {invoice.Date:d}", 1.2);
+        headerBlock.AddLine(font, $"To: {invoice.To}", 1.2);
+        headerBlock.AddLine(font, $"Address: {invoice.Address}", 1.2);
+        headerBlock.AddLine(font, $"Phone: {invoice.Phone}", 1.2);
+        headerBlock.AddLine(font, $"Salesman: {invoice.Salesman}", 1.2);
+
+        // Generate item table block
+        var itemTableBlock = page.AddBlock
+            (font, leftMargin, headerBlock.Rect.Bottom + 50, new List<string>(), 1.5);
+        var columnHeaderLine = itemTableBlock.AddLine(font, "Code  Description  Qty  Amount  Vat Code  Vat Amount  Total", 1.2);
+        columnHeaderLine.Rect.Width = 600; // Expand the width of the header line to match the table columns
+        double itemTop = columnHeaderLine.Rect.Bottom + 20;
+        foreach (var item in invoice.Items)
         {
-            Rect = new TextRect { Left = left, Top = top, Width = 0, Height = 0 },
-        };
-        foreach (var line in lines)
-        {
-            var size = AddLine(block, font, line, lineHeight);
-            block.Rect.Width = Math.Max(block.Rect.Width, size.Width);
-            block.Rect.Height += size.Height;
+            var itemLine = itemTableBlock.AddLine(font, $"{item.Code}  {item.Description}  {item.Qty}  {item.Amount:C}  {item.VatCode}  {item.VatAmount:C}  {item.Total:C}", 1.2);
+            itemLine.Rect.Top = itemTop;
+            itemTop = itemLine.Rect.Bottom + 10;
         }
-        page.Blocks.Add(block);
-        return block;
+
+        return page;
     }
-
-    public static TextRect AddLine(TextBlock block, TextFont font, string lineText, double lineHeight)
-    {
-        var line = new TextLine();
-        line.Rect = new TextRect() { Left = 0, Top = block.Rect!.Top, Width = 0, Height = 0 };
-
-        var words = lineText.Split(' ');
-        foreach (var word in words)
-        {
-            var size = AddWord(line, font, word);
-            line.Rect.Width += size.Width;
-            line.Rect.Height = Math.Max(line.Rect.Height, size.Height);
-        }
-        line.Rect.Top = block.Rect.Height;
-        line.Rect.Left = 0;
-
-        block.Lines.Add(line);
-        block.Rect.Height += lineHeight;
-        return line.Rect;
-    }
-
-    public static TextRect AddWord(TextLine line, TextFont font, string wordText)
-    {
-        var word = new TextWord();
-        word.Rect = new TextRect() { Left = line.Rect!.Left, Top = 0, Width = 0, Height = 0 };
-
-        var symbols = AddSymbols(word, font, wordText);
-        word.Rect.Width = symbols.Width;
-        word.Rect.Height = symbols.Height;
-
-        line.Words.Add(word);
-        return word.Rect;
-    }
-
-    public static TextRect AddSymbols(TextWord word, TextFont font, string wordText)
-    {
-        var rect = new TextRect()
-        {
-            Left = word.Rect!.Width,
-            Top = 0,
-            Width = 0,
-            Height = 0
-        };
-
-        foreach (var ch in wordText)
-        {
-            var symbol = font[ch.ToString()];
-            if (symbol != null)
-            {
-                var symbolRect = new TextRect()
-                {
-                    Left = rect.Width,
-                    Top = symbol.Rect!.Top,
-                    Width = symbol.Rect!.Width,
-                    Height = symbol.Rect!.Height
-                };
-                rect.Width += symbol.Rect.Width;
-                rect.Height = Math.Max(rect.Height, symbol.Rect.Height);
-
-                word.Symbols.Add(new TextSymbol
-                {
-                    Text = ch.ToString(),
-                    Rect = symbolRect
-                });
-            }
-        }
-        word.Rect.Width = rect.Width;
-        word.Rect.Height = rect.Height;
-        return rect;
-    }
-
-
 }

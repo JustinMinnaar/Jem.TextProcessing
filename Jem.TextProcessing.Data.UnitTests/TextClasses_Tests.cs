@@ -10,7 +10,7 @@ public class TextClasses_Tests
         var symbol = new TextSymbol()
         {
             Text = "A",
-            Rect = new TextRect() { Left = 100, Top = 100, Width = 10, Height = 10 },
+            Rect = new RectangleF() { Left = 100, Top = 100, Width = 10, Height = 10 },
             BaseLine = 90,
             Color = 0xFF0000 // red color
         };
@@ -18,7 +18,7 @@ public class TextClasses_Tests
         var word = new TextWord()
         {
             Text = "Apple",
-            Rect = new TextRect() { Left = 50, Top = 80, Width = 50, Height = 10 },
+            Rect = new RectangleF() { Left = 50, Top = 80, Width = 50, Height = 10 },
             BaseLine = 70,
             Color = 0x00FF00, // green color
             Symbols = new List<TextSymbol>() { symbol }
@@ -27,7 +27,7 @@ public class TextClasses_Tests
         var line = new TextLine()
         {
             Text = "The quick brown fox jumps over the lazy dog.",
-            Rect = new TextRect() { Left = 10, Top = 50, Width = 500, Height = 10 },
+            Rect = new RectangleF() { Left = 10, Top = 50, Width = 500, Height = 10 },
             BaseLine = 40,
             Color = 0x0000FF, // blue color
             Words = new List<TextWord>() { word }
@@ -36,7 +36,7 @@ public class TextClasses_Tests
         var block = new TextBlock()
         {
             Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            Rect = new TextRect() { Left = 0, Top = 0, Width = 500, Height = 100 },
+            Rect = new RectangleF() { Left = 0, Top = 0, Width = 500, Height = 100 },
             BaseLine = 30,
             Color = 0x000000, // black color
             Lines = new List<TextLine>() { line }

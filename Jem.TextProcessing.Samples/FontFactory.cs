@@ -68,7 +68,7 @@ public class FontFactory
         path.AddString(text, font.FontFamily, (int)font.Style, font.Size, position, format);
 
         var bounds = path.GetBounds();
-        var rect = new TextRect()
+        var rect = new Data.RectangleF()
         {
             Left = 0,
             Top = 0, // font.Height - font.FontFamily.GetCellAscent(FontStyle.Regular),
